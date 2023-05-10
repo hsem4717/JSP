@@ -1,0 +1,33 @@
+header{
+	position: fixed;
+	text-align: center;
+	background-color: orange;
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+	top:0px;
+}
+
+footer{
+	position:fixed;
+	bottom:0px;
+	text-align: center;
+	background-color: orange;
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+}
+nav{
+	top:30px;
+	position:fixed;
+	background-color: pink;
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+}
+section{
+	top:60px;
+	position:fixed;
+	height: 100%;
+	width: 100%;
+}
