@@ -1,0 +1,49 @@
+create table LOCATION(
+LID varchar2(12) NOT NULL,
+LOCATION varchar2(30),
+MONEY varchar2(10),
+primary key(LID)
+);
+insert into LOCATION values('L01', '대한민국', '102973');
+insert into LOCATION values('L02', '일본', '258694');
+insert into LOCATION values('L03', '싱가포르', '291893');
+insert into LOCATION values('L04', '호주', '673328');
+
+create table RESERVATION(
+RID varchar2(8) NOT NULL,
+CNAME varchar2(30),
+GENDER varchar2(2),
+LID varchar2(12),
+GODATE varchar2(8),
+COMEDATE varchar2(8),
+primary key(RID)
+);
+
+drop table RESERVATION;
+
+insert into RESERVATION values('R01', '김익명', 'M', 'L01', '20230101', '20230110');
+insert into RESERVATION values('R02', '이익명', 'M', 'L02', '20230110', '20231011');
+insert into RESERVATION values('R03', '박익명', 'F', 'L03', '20231011', '20231010');
+insert into RESERVATION values('R04', '최익명', 'M', 'L02', '20230111', '20231001');
+insert into RESERVATION values('R05', '강익명', 'F', 'L01', '20230123', '20230123');
+insert into RESERVATION values('R06', '우익명', 'F', 'L04', '20230713', '20231231');
+insert into RESERVATION values('R07', '주익명', 'M', 'L03', '20230713', '20231111');
+
+delete from RESERVATION where RID = '123';
+
+SELECT * FROM CUSTOMER NATURAL JOIN RESERVATION;
+
+create table CUSTOMER(
+CID varchar2(4) NOT NULL,
+CNAME varchar2(30),
+CGRADE varchar2(40),
+primary key(CID)
+);
+
+insert into CUSTOMER values('1001', '김익명', '일반');
+insert into CUSTOMER values('1002', '이익명', '안프리미엄');
+insert into CUSTOMER values('1003', '박익명', '프리미엄');
+insert into CUSTOMER values('1004', '최익명', '일반');
+insert into CUSTOMER values('1005', '강익명', '프리미엄');
+insert into CUSTOMER values('1006', '우익명', '일반');
+insert into CUSTOMER values('1007', '주익명', '안프리미엄');
